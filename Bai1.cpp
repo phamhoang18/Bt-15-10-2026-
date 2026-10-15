@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include <string>
+#include <iomanip>
 
 using namespace std;
 
@@ -38,13 +38,13 @@ void Nhap(const string& filename) {
 void HienThi() {
     cout << "\n--- MA TRAN TRONG SO CUA DO THI ---\n     ";
     for (int i = 0; i < n; i++) {
-        cout << vertexNames[i] << "\t";
+        cout << left << setw(4) <<  vertexNames[i];
     }
     cout << "\n";
     for (int i = 0; i < n; i++) {
-        cout << vertexNames[i] << "  ";
+        cout << left << setw(5) << vertexNames[i];
         for (int j = 0; j < n; j++) {
-            cout << A[i][j] << "\t";
+            cout << left << setw(5) << A[i][j];
         }
         cout << "\n";
     }
